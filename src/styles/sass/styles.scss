@@ -1,0 +1,5 @@
+@use "variaveis" as var;
+
+body {
+  background-color: var.$bg-color;
+}
