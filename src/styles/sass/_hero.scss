@@ -1,0 +1,55 @@
+@use "mixins";
+@use "variaveis";
+.hero {
+  background-image: url(../../../dist/images/hero/hero.jpg);
+  max-width: 100vw;
+  min-height: 85vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  filter: brightness(80%) saturate(90%);
+  
+  
+  &__content {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    padding-bottom: 40px;
+    padding-top:40px;
+        h1 {
+      text-align: left;
+      padding-top: 450px;
+      padding-bottom: 20px;
+      span {
+        color: variaveis.$prim-color;
+      }
+          
+    }
+  }
+  &__call {
+    border: 1px solid variaveis.$prim-color;
+    padding: 10px 40px;
+    background-color: variaveis.$prim-color;
+    width: 420px;
+    display: flex;
+    border-radius: 5px;
+    box-shadow: 2px 2px 2px 2px rgba($color: #000000, $alpha: 0.5);
+        
+    p {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-weight: 800;
+      img {
+        margin-left: 10px;
+      }
+    }
+
+    img {
+      width: 40px;
+    }
+  }
+}
+.button {
+  margin-right: 30px;
+}
+ 

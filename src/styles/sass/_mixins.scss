@@ -1,0 +1,31 @@
+@use './variaveis';
+
+@mixin text($fontsize: 16px) {
+  font-size: $fontsize;
+  color: variaveis.$white-color;
+}
+.texto {
+@include text(16px);
+line-height: 1.4;
+}
+.titulo {
+  @include text(64px);
+  line-height: 1;
+   }
+  
+    .subtitulo {
+    @include text(36px);
+    line-height: 1.1;
+    font-weight: 700;
+    color: variaveis.$prim-color
+  }
+.texto--destaque {
+  @include text(18px);
+  line-height: 1.2;
+}
+
+.texto--link {
+  @include text(24px);
+  line-height: 1; 
+}
+

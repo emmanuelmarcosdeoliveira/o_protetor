@@ -1,5 +1,3 @@
-@use "variaveis" as var;
+@use "reset";
+@use "hero";
 
-body {
-  background-color: var.$bg-color;
-}
