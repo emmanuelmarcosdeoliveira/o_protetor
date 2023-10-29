@@ -1,0 +1,66 @@
+@use "variaveis";
+
+.redes__sociais {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: #272727;
+  border-radius: 15px;
+  box-shadow: 4px 4px 4px rgba($color: #000000, $alpha: 0.5);
+
+  &__item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+        flex-grow: 1;
+        cursor: pointer;
+        margin-bottom: 20px;
+       
+   
+    a {
+      display: inline-flex;
+       color: variaveis.$white-color;
+      img {
+        width: 35px;
+        height: 35px;
+       
+      }
+    }
+    span {
+      font-size: 10px;
+      padding-left: 10px;
+    }
+    h4 {
+      padding-left: 10px;
+    }
+  
+  }
+}
+
+.twitter {
+  div:hover {
+    color: variaveis.$over-twitter;
+  }
+ }
+
+ .facebook {
+  div:hover {
+    color: variaveis.$over-face;
+  }
+ }
+
+ .instagran {
+  div:hover {
+    color: variaveis.$over-instagran;
+  }
+ }
+ .yotube {
+  div:hover {
+    color: variaveis.$over-yotube;
+  }
+ }
+ .linkedin {
+  div:hover {
+    color: variaveis.$over-linkedin;
+  }
+ }
+

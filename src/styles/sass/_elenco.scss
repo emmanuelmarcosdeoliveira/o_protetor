@@ -1,0 +1,48 @@
+@use "variaveis";
+
+.elenco {
+  height: auto;
+  &__grid {
+    max-width: 1400px;
+  }
+
+  &__list {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    padding-bottom: 60px;
+  }
+
+  &__item {
+    width: 165px;
+    height: 235px;
+    
+    padding: 20px 20px 50px;
+    text-align: center;
+    border-radius: 5px;
+    transition: 500ms;
+    background-color: #272727;;
+    &:hover {
+      background-color: #272727;;
+      border-color: variaveis.$prim-color;
+      scale: (1.125);
+    }
+    img {
+      max-width: 124px;
+      max-height: 165px;
+      border-radius: 5px;
+      box-shadow: 4px 4px 4px rgba($color: #000000, $alpha: 0.5);
+    }
+  }
+}
+.elenco__name {
+  margin-top: 10px;
+}
+
+.elenco {
+  display: none;
+}
+.is-active {
+  display: block;
+}
