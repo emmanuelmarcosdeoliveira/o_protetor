@@ -4,19 +4,19 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Cineart - Filmes">
-  <title>Cineart</title>
-  <link rel="shortcut icon" href="../favicon.svg" type="image/x-icon">
+  <meta name="description" content="O Protetor III">
+  <title>O Protetor III</title>
+  <link rel="shortcut icon" href="favicon.svg" type="image/x-icon">
   <link rel="stylesheet" href="../dist/css/styles.css">
 </head>
 
 <body>
-  <section class="hero">
+  <section class="hero container">
     <div class="hero__content container">
       <h1 class="titulo">O Protetor: <span>Capítulo</span><br> Final
       </h1>
-      <p class="subtitulo">05 de outubro nos cinemas</p>
-      <div class="button">
+      <p class="texto--destaque">05 de outubro nos cinemas</p>
+      <div class="hero__content__button">
         <button>
           <a href="">
             <img src="../dist/images/icons/trailer.svg" alt="">
@@ -32,16 +32,212 @@
       </div>
     </div>
   </section>
-  <section class="container">
-    <ul>
-      <li>trailer</li>
-      <li>Sinopse</li>
-      <li>Atores</li>
+
+  <nav class="shows__tabs">
+    <button data-tab-button="shows" class="tabs__button">
+      TRAILER
+    </button>
+    <button data-tab-button="sinopse" class="tabs__button is--active">
+      SINOPSE
+    </button>
+    <button data-tab-button="elenco" class="tabs__button">
+      ELENCO
+    </button>
+  </nav>
+
+  <section data-tab-id="shows" class="shows container">
+    <h2 class="subtitulo">TRAILER</h2>
+    <div class="shows__grid">
+      <div class="shows__titulo">
+        <img src="../src/images/icons/rodape.svg" alt="cineart ">
+        <h3 class="subtitulo">Assista o trailer aqui!</h3>
+      </div>
+      <div class="grid__video">
+        <iframe width="690" height="415" src="https://www.youtube.com/embed/4dvYznqqqPo?si=b-Kim197DzBqsym7" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+      </div>
+    </div>
+  </section>
+  <section data-tab-id="sinopse" class="sinopse container is-active">
+    <h2 class="subtitulo">SINOPSE</h2>
+    <div class="sinopse__grid">
+      <div class="sinopse__item1">
+        <p class="sinopse__descricao">O Protetor: Capítulo Final<br>
+          Denzel Washington encerra trilogia com propósito</p>
+        <p class="sinopse__descricao">Não recomendado para menores de 18 anos</p>
+        <p class="sinopse__descricao">O Protetor: Capítulo Final é o terceiro - e último - filme da franquia O Protetor, iniciada em 2014 e inspirada pela série homônima estrelada por Edward Woodward nos anos 80. No terceiro capítulo da saga, desde que desistiu de sua vida como assassino do governo, Robert McCall (Denzel Washington) não consegue descansar o suficiente. Ele quer ajudar as pessoas ao seu redor e tem lutado para reconciliar as coisas horríveis que fez no passado, encontrando um estranho consolo em servir à justiça em nome dos oprimidos. Agora morando no sul da Itália, ele logo descobre que seus novos amigos estão sob o controle dos chefes do crime local. À medida que os eventos se tornam mortais, McCall se torna um protetor ao enfrentar a máfia. Quando alguém é injustiçado, o ex-agente do governo reativa suas habilidades de seu passado brutal e sai como um exército de um homem para realizar a justiça vigilante</p>
+      </div>
+      <div class="sinopse__item2">
+        <img class="sinopse__image" src="../dist/images/sinopse.jpg" alt="">
+      </div>
+    </div>
+  </section>
+  <section data-tab-id="elenco" class="elenco container">
+    <h2 class="subtitulo">ELENCO</h2>
+    <div class="elenco__grid">
+      <ul class="elenco__list">
+        <li class="elenco__item">
+          <img src="../dist/images/athor/ator-1.jpg" alt="">
+          <p class="elenco__name">Remo Ginore</p>
+        </li>
+        <li class="elenco__item">
+          <img src="../dist/images/athor/ator-2.jpg" alt="">
+          <p class="elenco__name">Remo Ginore</p>
+        </li>
+        <li class="elenco__item">
+          <img src="../dist/images/athor/ator-3.webp" alt="">
+          <p class="elenco__name">Remo Ginore</p>
+        </li>
+        <li class="elenco__item">
+          <img src="../dist/images/athor/ator-4.webp" alt="">
+          <p class="elenco__name">Remo Ginore</p>
+        </li>
+        <li class="elenco__item">
+          <img src="../dist/images/athor/ator-5.jpg" alt="">
+          <p class="elenco__name">Remo Ginore</p>
+        </li>
+        <li class="elenco__item">
+          <img src="../dist/images/athor/ator-5.jpg" alt="">
+          <p class="elenco__name">Remo Ginore</p>
+        </li>
+        <li class="elenco__item">
+          <img src="../dist/images/athor/ator-5.jpg" alt="">
+          <p class="elenco__name">Remo Ginore</p>
+        </li>
+        <li class="elenco__item">
+          <img src="../dist/images/athor/ator-5.jpg" alt="">
+          <p class="elenco__name">Remo Ginore</p>
+        </li>
+      </ul>
+
+    </div>
+  </section>
+
+  <section class="faq container">
+    <h2 class="titulo">Perguntas Frequentes</h2>
+    <ul class="faq__questions">
+      <li class="faq__question__item faq__question__item">
+        <div data-faq-question class="faq__question__item__question">
+          Quando o filme irá estreiar?
+        </div>
+        <div class="faq__question__item__answer">
+          O filme irá estreiar nos melhores cinemas no dia 05 de Outubro de 2023
+        </div>
+
+      </li>
+      <li class="faq__question__item">
+        <div data-faq-question class="faq__question__item__question">
+          Quando o filme irá estreiar?
+        </div>
+        <div class="faq__question__item__answer">
+          O filme irá estreiar nos melhores cinemas no dia 05 de Outubro de 2023
+        </div>
+
+      </li>
+      <li class="faq__question__item">
+        <div data-faq-question class="faq__question__item__question">
+          Quando o filme irá estreiar?
+        </div>
+        <div class="faq__question__item__answer">
+          O filme irá estreiar nos melhores cinemas no dia 05 de Outubro de 2023
+        </div>
+
+      </li>
+      <li class="faq__question__item">
+        <div data-faq-question class="faq__question__item__question">
+          Quando o filme irá estreiar?
+        </div>
+        <div class="faq__question__item__answer">
+          O filme irá estreiar nos melhores cinemas no dia 05 de Outubro de 2023
+        </div>
+
+      </li>
+      <li class="faq__question__item">
+        <div data-faq-question class="faq__question__item__question">
+          Quando o filme irá estreiar?
+        </div>
+        <div class="faq__question__item__answer">
+          O filme irá estreiar nos melhores cinemas no dia 05 de Outubro de 2023
+        </div>
+      </li>
     </ul>
   </section>
 
 
+  <section class="redes__sociais container">
+
+    <div class="redes__sociais__item facebook">
+      <a href="">
+        <div>
+        <img src="../src/images/redes-sociais/facebook.svg" alt="">
+        </div>
+        <div>
+        <span>FACEBOOK</span>
+        <h4>/O PROTETOR III</h4>
+        </div>
+      </a>
+    </div>
+    <div class="redes__sociais__item instagran ">
+      <a href="">
+        <div>
+        <img src="../src/images/redes-sociais/instagran.svg" alt="">
+        </div>
+        <div>
+        <span>INSTAGRAN</span>
+        <h4>/O PROTETOR III</h4>
+        </div>
+      </a>
+    </div>
+    <div class="redes__sociais__item yotube">
+      <a href="">
+        <div>
+        <img src="../src/images/redes-sociais/yotube.svg" alt="">
+        </div>
+        <div>
+        <span>YOUTUBE</span>
+        <h4>/O PROTETOR III</h4>
+        </div>
+      </a>
+    </div>
+    <div  class="redes__sociais__item twitter">
+      <a href="">
+        <div>
+        <img src="../src/images/redes-sociais/twitter.svg" alt="">
+        </div>
+        <div>
+        <span>TWITTER</span>
+        <h4>/O PROTETOR III</h4>
+        </div>
+      </a>
+    </div>
+    <div class="redes__sociais__item linkedin">
+      <a href="">
+        <div>
+        <img src="../src/images/redes-sociais/linkedin.svg" alt="">
+        </div>
+        <div>
+        <span>LINKEDIN</span>
+        <h4>/O PROTETOR III</h4>
+        </div>
+      </a>
+    </div>
 
 
+
+
+
+
+
+
+  </section>
+  <footer class="footer">
+    <div class="footer__conteudo container">
+      <img src="../src/images/icons/rodape.svg" alt="">
+      <p class=""> &copy; O Protetor III </p>
+      <p>Construido por <a href="">Dev-oliveira</a></p>
+    </div>
+  </footer>
+
+  <script src="../src/scripts/main.js"></script>
 </body>
+
 </html>

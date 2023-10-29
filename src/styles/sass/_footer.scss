@@ -1,0 +1,30 @@
+@use "variaveis";
+
+.footer {
+  background-color: variaveis.$prim-color;
+  &__conteudo {
+    margin-top: 60px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    p {
+      font-size: 22px;
+      color: variaveis.$white-color-2;
+      padding-left: 20px;
+      a {
+        color: variaveis.$white-color-2;
+        &:hover {
+          color: variaveis.$white-color;
+        }
+      }
+    }
+    img {
+      display: block;
+      flex-grow: 1;
+      max-width: 200px;
+    }
+  }
+}

@@ -9,23 +9,26 @@
 line-height: 1.4;
 }
 .titulo {
-  @include text(64px);
+  @include text(48px);
   line-height: 1;
    }
   
     .subtitulo {
-    @include text(36px);
+    @include text(24px);
     line-height: 1.1;
     font-weight: 700;
-    color: variaveis.$prim-color
+    color: variaveis.$prim-color;
+    font-family: KronaOne;
   }
 .texto--destaque {
-  @include text(18px);
+  @include text(26px);
   line-height: 1.2;
+  color: variaveis.$prim-color;
+  font-weight: 700;
 }
 
 .texto--link {
-  @include text(24px);
+  @include text(26px);
   line-height: 1; 
 }
 

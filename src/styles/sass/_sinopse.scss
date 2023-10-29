@@ -1,0 +1,43 @@
+.sinopse {
+  &__grid {
+    display: flex;
+     flex-wrap:wrap;
+    height: 600px;
+  }
+  &__descricao {
+    max-width: 540px;
+    flex-grow: 1;
+    
+  }
+  &__descricao:nth-child(2) {
+    font-size: 18px;
+    font-weight: 700;
+  }
+  &__descricao:first-child {
+    padding-bottom: 40px;
+    font-weight: 700;
+    font-size: 18px;
+  }
+  &__descricao:last-child {
+    margin-top: 40px;
+    line-height: 1.4;
+  }
+  &__image {
+    display: block;
+    max-width: 420px;
+    width: 100%;
+  }
+}
+
+.sinopse__item1 {
+ flex-grow: 1;
+  padding-bottom: 40px;
+  
+}
+
+.sinopse {
+  display: none;
+}
+.is-active {
+  display: block;
+}
