@@ -9,21 +9,50 @@
     center center no-repeat;
   background-size: cover;
   filter: brightness(90%) saturate(90%);
+  @media (max-width: 480px) {
+    background: url(../../../dist/images/hero/hero-6.jpg) top center;
+    max-height: 100%;
+    padding-top: 120px;
+  }
 
   &__content {
     text-align: right;
+    padding-right: 20px;
     padding-bottom: 40px;
     padding-top: 40px;
+    @media (max-width: 480px) {
+      padding-left: 20px;
+      padding-bottom: 10px;
+      text-align: left;
+    }
     h1 {
       text-align: right;
       padding-top: 250px;
       padding-bottom: 20px;
+      @media (max-width: 480px) {
+        padding-top: 0px;
+        font-size: 24px;
+        padding-bottom: 5px;
+        text-align: left;
+      }
       span {
         color: variaveis.$prim-color;
       }
     }
     p {
       font-weight: 700;
+      font-size: 16px;
+      @media (max-width: 480px) {
+        color: variaveis.$white-color;
+      }
+    }
+    &__button {
+      img {
+        transition: 1s ease;
+      }
+      a:hover img {
+        transform: translateX(10px);
+      }
     }
   }
 }

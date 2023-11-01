@@ -24,7 +24,8 @@
   &__grid {
     display: flex;
     flex-wrap: wrap;
-    height: 600px;
+    justify-content: center;
+    height: auto;
   }
   &__titulo {
     display: flex;
@@ -48,6 +49,15 @@
 .grid__video {
   display: flex;
   align-items: center;
+  margin-right: 20px;
+  @media (max-width: 480px) {
+    margin-right: 0px;
+    iframe {
+      width: 380px;
+      height: 240px;
+      margin-top: 20px;
+    }
+  }
 }
 
 .shows {

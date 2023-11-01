@@ -1,12 +1,19 @@
+@import "./mixins";
+
 .sinopse {
   &__grid {
     display: flex;
-     flex-wrap:wrap;
-    height: 600px;
+    flex-wrap: wrap;
+    justify-content: center;
+    height: auto;
   }
   &__descricao {
     max-width: 540px;
     flex-grow: 1;
+    margin-left: 20px;
+    margin-right: 20px;
+   
+   
     
   }
   &__descricao:nth-child(2) {
@@ -26,13 +33,17 @@
     display: block;
     max-width: 420px;
     width: 100%;
+    margin-right: 20px;
+    @media (max-width: 480px){
+      margin-right: 0;
+      width: 380px;
+    }
   }
 }
 
 .sinopse__item1 {
- flex-grow: 1;
+  flex-grow: 1;
   padding-bottom: 40px;
-  
 }
 
 .sinopse {

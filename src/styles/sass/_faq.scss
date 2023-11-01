@@ -2,14 +2,31 @@
 @use "variaveis";
 
 .faq {
-  
+ padding-left: 20px;
+ padding-right: 20px;
+ @media (max-width: 480px ) {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 370px;
+ }
   h2 {
     color: variaveis.$prim-color;
     font-family: "KronaOne", "sans-serif";
     font-size: 32px;
+    @media (max-width: 480px) {
+      font-size: 24px;
+    }
   }
   &__question {
-   
+    background-color: #272727;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 4px 4px 4px rgba($color: #000000, $alpha: 0.5);
+    @media (max-width: 480px ) {
+      padding: 10px;
+      width: 380px;
+    }
     &__item {
       font-size: 22px;
       background-color: #272727;
@@ -18,14 +35,26 @@
       max-width: 1200px;
       width: 100%;
       margin-bottom: 0px;
-     
+      @media (max-width: 480px) {
+        font-size: 14px;
+        padding-left: 10px;
+        padding-right: 10px;
+        padding-bottom: 20px;
+        max-width: 360px;
+      }
+
       &__question {
         display: block;
         cursor: pointer;
         border-bottom: 1px solid rgba(255, 0, 0, 0.205);
         position: relative;
+        @media (max-width: 480px){
+          padding-right: 20px;
+        }
+               
         p {
           margin-bottom: 10px;
+           
         }
         &::after {
           content: "+";
@@ -38,6 +67,10 @@
           margin-top: -10px;
           font-size: 40px;
           color: variaveis.$prim-color;
+          @media (max-width: 480px) {
+            right: 0px;
+            font-size: 32px;
+          }
         }
       }
       &__answer {
@@ -45,30 +78,22 @@
         color: variaveis.$white-color-2;
         height: 0px;
         overflow: hidden;
-        padding: 0 24px; 
-       
+        padding: 0 24px;
       }
       &--is-open {
         .faq__question__item__question::after {
-        content: "-";
-        font-size: 60px;
-        color: variaveis.$prim-color;
+          content: "-";
+          font-size: 60px;
+          color: variaveis.$prim-color;
+          
         }
         .faq__question__item__answer {
-         height: 0px;
+          height: auto;
           padding-top: 24px;
           padding-bottom: 24px;
-          transition: height, .500s ease-in-out;
+          transition: height, 0.5s ease-in-out;
         }
       }
     }
   }
-}
-
-
-ul {
-  background-color:  #272727;
-  padding: 25px;
-  border-radius: 15px;
-  box-shadow: 4px 4px 4px rgba($color: #000000, $alpha: .5);
 }
