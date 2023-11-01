@@ -1,0 +1,68 @@
+@use "mixins";
+@use "variaveis";
+
+.header {
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  background-color: variaveis.$bg-color;
+  &--is-hidden {
+background-color: transparent;
+    .header__container__logo {
+      opacity: 0;
+    }
+    .header__container__links__item:first-child {
+      opacity: 0;
+      visibility: hidden;
+    }
+
+  }
+}
+
+.header__container {
+ 
+  display: flex;
+  justify-content: space-between;
+  
+  &__logo {
+    padding: 10px;
+    img {
+      max-width: 48px;
+      width: 100%;
+      display: block;
+    }
+  }
+  &__links {
+    padding: 10px;
+    display: flex;
+    margin-right: 10px;
+    &__item {
+      display: flex;
+      align-items: center;
+      margin-right: 10px;
+      padding-left: 20px;
+      padding-right: 20px;
+      border-radius: 5px;
+      background-color: rgba($color: #b5121b, $alpha: 0.5);
+      &:hover {
+        background-color: lighten($color: #b5121b, $amount: 5%) ;
+      }
+      @include mixins.breakpoint(mobile) {
+        margin-right: 10px;
+        padding-left: 10px;
+        padding-right: 10px;
+      }
+      
+    a img {
+      max-width: 24px;
+      width: 100%;
+      display: block;
+      margin-left: 10px;
+     }
+     
+      }
+    }
+  }
+
+

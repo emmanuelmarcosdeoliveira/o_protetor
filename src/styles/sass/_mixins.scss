@@ -49,7 +49,7 @@ $mobile: 480px;
       @content;
     }
   } @else if $size == tablet {
-    @media (min-width:  $tablet) {
+    @media (max-width:  $tablet) {
       @content;
     }
   } @else if $size == mobile {

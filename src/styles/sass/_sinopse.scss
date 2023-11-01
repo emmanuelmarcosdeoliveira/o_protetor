@@ -1,17 +1,28 @@
-@import "./mixins";
+@use "./mixins";
 
 .sinopse {
   &__grid {
     display: flex;
+   @include mixins.breakpoint(tablet) {
     flex-wrap: wrap;
+   }
     justify-content: center;
     height: auto;
   }
   &__descricao {
     max-width: 540px;
+    
+    
+    @include mixins.breakpoint(desktop) {
+      max-width: 500px;
+    }
+    @include mixins.breakpoint(tablet) {
+     text-align: center;
+        }
     flex-grow: 1;
     margin-left: 20px;
     margin-right: 20px;
+    
    
    
     
@@ -34,7 +45,7 @@
     max-width: 420px;
     width: 100%;
     margin-right: 20px;
-    @media (max-width: 480px){
+     @include mixins.breakpoint(mobile){
       margin-right: 0;
       width: 380px;
     }

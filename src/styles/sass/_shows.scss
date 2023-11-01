@@ -1,3 +1,4 @@
+@use "mixins";
 @use "variaveis";
 .shows {
   &__list {
@@ -50,7 +51,13 @@
   display: flex;
   align-items: center;
   margin-right: 20px;
-  @media (max-width: 480px) {
+  @include mixins.breakpoint(tablet) {
+    iframe {
+      width: 480px;
+      height: 260px;
+    }
+  }
+  @include mixins.breakpoint (mobile) {
     margin-right: 0px;
     iframe {
       width: 380px;

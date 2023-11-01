@@ -4,7 +4,7 @@
 .faq {
  padding-left: 20px;
  padding-right: 20px;
- @media (max-width: 480px ) {
+ @include mixins.breakpoint (mobile ) {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -14,7 +14,7 @@
     color: variaveis.$prim-color;
     font-family: "KronaOne", "sans-serif";
     font-size: 32px;
-    @media (max-width: 480px) {
+    @include mixins.breakpoint (mobile) {
       font-size: 24px;
     }
   }
@@ -23,7 +23,7 @@
     padding: 20px;
     border-radius: 15px;
     box-shadow: 4px 4px 4px rgba($color: #000000, $alpha: 0.5);
-    @media (max-width: 480px ) {
+    @include mixins.breakpoint (mobile) {
       padding: 10px;
       width: 380px;
     }
@@ -35,7 +35,12 @@
       max-width: 1200px;
       width: 100%;
       margin-bottom: 0px;
-      @media (max-width: 480px) {
+      @include mixins.breakpoint(tablet) {
+        font-size: 16px;
+        padding-left: 0px;
+        
+      }
+      @include mixins.breakpoint (mobile) {
         font-size: 14px;
         padding-left: 10px;
         padding-right: 10px;
@@ -48,7 +53,7 @@
         cursor: pointer;
         border-bottom: 1px solid rgba(255, 0, 0, 0.205);
         position: relative;
-        @media (max-width: 480px){
+         @include mixins.breakpoint (mobile){
           padding-right: 20px;
         }
                
@@ -67,7 +72,10 @@
           margin-top: -10px;
           font-size: 40px;
           color: variaveis.$prim-color;
-          @media (max-width: 480px) {
+          @include mixins.breakpoint(tablet) {
+            right: 0;
+          }
+          @include mixins.breakpoint(mobile) {
             right: 0px;
             font-size: 32px;
           }
