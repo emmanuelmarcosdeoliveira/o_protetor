@@ -7,14 +7,17 @@
   left: 0;
   z-index: 1;
   background-color: variaveis.$bg-color;
+  transition: background-color .5s ease-in;
   &--is-hidden {
 background-color: transparent;
+transition: background-color .5s ease-in;
     .header__container__logo {
       opacity: 0;
     }
     .header__container__links__item:first-child {
       opacity: 0;
       visibility: hidden;
+      transition: opacity .5s ease-in;
     }
 
   }
@@ -27,6 +30,7 @@ background-color: transparent;
   
   &__logo {
     padding: 10px;
+    transition: opacity .5s ease-in;
     img {
       max-width: 48px;
       width: 100%;
@@ -45,6 +49,7 @@ background-color: transparent;
       padding-right: 20px;
       border-radius: 5px;
       background-color: rgba($color: #b5121b, $alpha: 0.5);
+      transition: opacity .5s ease-in;
       &:hover {
         background-color: lighten($color: #b5121b, $amount: 5%) ;
       }

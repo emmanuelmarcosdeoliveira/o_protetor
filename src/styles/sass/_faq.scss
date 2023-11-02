@@ -95,12 +95,13 @@
           font-size: 60px;
           color: variaveis.$prim-color;
           
+          
         }
         .faq__question__item__answer {
           height: auto;
           padding-top: 24px;
           padding-bottom: 24px;
-          transition: height, 0.5s ease-in-out;
+          transition: height, 2s ease;
         }
       }
     }
