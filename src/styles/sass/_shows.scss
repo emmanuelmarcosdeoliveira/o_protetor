@@ -1,4 +1,6 @@
+@use "mixins";
 @use "variaveis";
+@use "functions" as f;
 .shows {
   &__list {
     display: flex;
@@ -14,7 +16,7 @@
     gap: 10px;
   }
   &__item {
-    font-size: 28px;
+    font-size: f.textoem(28px);
     font-weight: 900;
     &:hover {
       color: variaveis.$prim-color;
@@ -24,7 +26,8 @@
   &__grid {
     display: flex;
     flex-wrap: wrap;
-    height: 600px;
+    justify-content: center;
+    height: auto;
   }
   &__titulo {
     display: flex;
@@ -48,6 +51,21 @@
 .grid__video {
   display: flex;
   align-items: center;
+  margin-right: 20px;
+  @include mixins.breakpoint(tablet) {
+    iframe {
+      width: 480px;
+      height: 260px;
+    }
+  }
+  @include mixins.breakpoint (mobile) {
+    margin-right: 0px;
+    iframe {
+      width: 380px;
+      height: 240px;
+      margin-top: 20px;
+    }
+  }
 }
 
 .shows {

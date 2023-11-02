@@ -1,18 +1,38 @@
+@use "./mixins";
+@use "functions" as f;
+
 .sinopse {
   &__grid {
     display: flex;
-     flex-wrap:wrap;
-    height: 600px;
+   @include mixins.breakpoint(tablet) {
+    flex-wrap: wrap;
+   }
+    justify-content: center;
+    height: auto;
   }
   &__descricao {
     max-width: 540px;
+    
+    
+    @include mixins.breakpoint(desktop) {
+      max-width: 500px;
+    }
+    @include mixins.breakpoint(tablet) {
+     text-align: center;
+        }
     flex-grow: 1;
+    margin-left: 20px;
+    margin-right: 20px;
+    
+   
+   
     
   }
   &__descricao:nth-child(2) {
-    font-size: 18px;
+    font-size: f.textoem(22px);
     font-weight: 700;
   }
+
   &__descricao:first-child {
     padding-bottom: 40px;
     font-weight: 700;
@@ -26,13 +46,17 @@
     display: block;
     max-width: 420px;
     width: 100%;
+    margin-right: 20px;
+     @include mixins.breakpoint(mobile){
+      margin-right: 0;
+      width: 380px;
+    }
   }
 }
 
 .sinopse__item1 {
- flex-grow: 1;
+  flex-grow: 1;
   padding-bottom: 40px;
-  
 }
 
 .sinopse {

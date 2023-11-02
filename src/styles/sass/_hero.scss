@@ -1,5 +1,6 @@
 @use "mixins";
 @use "variaveis";
+@use "functions";
 .hero {
   display: block;
   max-width: 100vw;
@@ -9,21 +10,69 @@
     center center no-repeat;
   background-size: cover;
   filter: brightness(90%) saturate(90%);
+  @include mixins.breakpoint(desktop) {
+    max-width: 100%;
+    height: 45vh;
+  }
+  @include mixins.breakpoint(tablet) {
+    background: url(../../../dist/images/hero/hero-4.png);
+    padding: 0;
+  }
+
+  @include mixins.breakpoint(mobile) {
+    background: url(../../../dist/images/hero/hero-6.jpg) top center no-repeat;
+    max-height: 100%;
+    padding-top: 120px;
+  }
 
   &__content {
     text-align: right;
+    padding-right: 20px;
     padding-bottom: 40px;
     padding-top: 40px;
+    @include mixins.breakpoint(mobile) {
+      padding-left: 20px;
+      padding-bottom: 10px;
+      text-align: left;
+    }
     h1 {
       text-align: right;
       padding-top: 250px;
       padding-bottom: 20px;
+      @include mixins.breakpoint(desktop) {
+        padding-top: 0px;
+      }
+      @include mixins.breakpoint(tablet) {
+        padding-top: 40px;
+      }
+
+      @include mixins.breakpoint(mobile) {
+        padding-top: 0px;
+        font-size: functions.textoem(24px);
+        padding-bottom: 5px;
+        text-align: left;
+      }
       span {
         color: variaveis.$prim-color;
       }
     }
     p {
       font-weight: 700;
+      font-size: 16px;
+      @include mixins.breakpoint(mobile) {
+        color: variaveis.$white-color;
+      }
+    }
+    &__button {
+      button:hover {
+        background-color: lighten($color: #b5121b, $amount: 5%);
+      }
+      img {
+        transition: 1s ease;
+      }
+      a:hover img {
+        transform: translateX(10px);
+      }
     }
   }
 }

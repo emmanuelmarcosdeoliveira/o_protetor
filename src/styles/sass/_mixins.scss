@@ -1,25 +1,26 @@
-@use './variaveis';
+@use "./variaveis";
+@use "sass:math";
 
 @mixin text($fontsize: 16px) {
   font-size: $fontsize;
   color: variaveis.$white-color;
 }
 .texto {
-@include text(16px);
-line-height: 1.4;
+  @include text(16px);
+  line-height: 1.4;
 }
 .titulo {
   @include text(48px);
   line-height: 1;
-   }
-  
-    .subtitulo {
-    @include text(24px);
-    line-height: 1.1;
-    font-weight: 700;
-    color: variaveis.$prim-color;
-    font-family: KronaOne;
-  }
+}
+
+.subtitulo {
+  @include text(24px);
+  line-height: 1.1;
+  font-weight: 700;
+  color: variaveis.$prim-color;
+  font-family: KronaOne;
+}
 .texto--destaque {
   @include text(26px);
   line-height: 1.2;
@@ -29,6 +30,33 @@ line-height: 1.4;
 
 .texto--link {
   @include text(26px);
-  line-height: 1; 
+  line-height: 1;
+}
+
+// Mixins de Breakpoints
+
+$ultra: 1400px;
+$desktop: 1200px;
+$tablet: 867px;
+$mobile: 480px;
+
+@mixin breakpoint($size) {
+  @if $size == ultra {
+    @media (min-width: $ultra) {
+      @content;
+    }
+  } @else if $size == desktop {
+    @media (max-width:  $desktop) {
+      @content;
+    }
+  } @else if $size == tablet {
+    @media (max-width:  $tablet) {
+      @content;
+    }
+  } @else if $size == mobile {
+    @media (max-width:  $mobile) {
+      @content;
+    }
+  }
 }
 
