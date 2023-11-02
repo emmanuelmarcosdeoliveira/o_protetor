@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded", function () {
   })
 
 
-  //Seção de Atrações programação das Abas
+  
   for (let i = 0; i < buttons.length; i++) {
     buttons[i].addEventListener("click", function (botao) {
       const abaAlvo = botao.target.dataset.tabButton;
