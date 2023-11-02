@@ -1,4 +1,5 @@
 @use "./variaveis";
+@use "sass:math";
 
 @mixin text($fontsize: 16px) {
   font-size: $fontsize;
@@ -58,3 +59,4 @@ $mobile: 480px;
     }
   }
 }
+

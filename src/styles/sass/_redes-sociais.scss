@@ -1,4 +1,5 @@
 @use "variaveis";
+@use "functions" as f;
 
 .redes__sociais {
   display: flex;
@@ -19,7 +20,7 @@
       }
     }
     span {
-      font-size: 10px;
+      font-size: f.textoem(10px);
       padding-left: 10px;
     }
     h4 {

@@ -1,4 +1,5 @@
 @use "./mixins";
+@use "functions" as f;
 
 .sinopse {
   &__grid {
@@ -28,9 +29,10 @@
     
   }
   &__descricao:nth-child(2) {
-    font-size: 18px;
+    font-size: f.textoem(22px);
     font-weight: 700;
   }
+
   &__descricao:first-child {
     padding-bottom: 40px;
     font-weight: 700;

@@ -1,5 +1,6 @@
 @use "mixins";
 @use "variaveis";
+@use "functions";
 
 .faq {
  padding-left: 20px;
@@ -13,7 +14,7 @@
   h2 {
     color: variaveis.$prim-color;
     font-family: "KronaOne", "sans-serif";
-    font-size: 32px;
+    font-size: functions.textoem(32px);
     @include mixins.breakpoint (mobile) {
       font-size: 24px;
     }
@@ -28,7 +29,7 @@
       width: 380px;
     }
     &__item {
-      font-size: 22px;
+      font-size: functions.textoem(22px);
       background-color: #272727;
       margin: 0 auto;
       padding: 20px;
@@ -36,12 +37,12 @@
       width: 100%;
       margin-bottom: 0px;
       @include mixins.breakpoint(tablet) {
-        font-size: 16px;
+        font-size: functions.textoem(16px);
         padding-left: 0px;
         
       }
       @include mixins.breakpoint (mobile) {
-        font-size: 14px;
+        font-size: functions.textoem(14px);
         padding-left: 10px;
         padding-right: 10px;
         padding-bottom: 20px;
@@ -70,7 +71,7 @@
           display: flex;
           align-items: center;
           margin-top: -10px;
-          font-size: 40px;
+          font-size: functions.textoem(40px);
           color: variaveis.$prim-color;
           @include mixins.breakpoint(tablet) {
             right: 0;

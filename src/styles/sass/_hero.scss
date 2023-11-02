@@ -1,5 +1,6 @@
 @use "mixins";
 @use "variaveis";
+@use "functions";
 .hero {
   display: block;
   max-width: 100vw;
@@ -47,7 +48,7 @@
 
       @include mixins.breakpoint(mobile) {
         padding-top: 0px;
-        font-size: 24px;
+        font-size: functions.textoem(24px);
         padding-bottom: 5px;
         text-align: left;
       }
