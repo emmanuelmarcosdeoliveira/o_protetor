@@ -19,6 +19,8 @@
     }
     @include mixins.breakpoint(tablet) {
      text-align: center;
+     max-width: 100%;
+     margin: 0 40px;
         }
     flex-grow: 1;
     margin-left: 20px;
