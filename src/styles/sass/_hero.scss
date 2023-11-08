@@ -48,7 +48,7 @@
 
       @include mixins.breakpoint(mobile) {
         padding-top: 0px;
-        font-size: functions.textoem(24px);
+        font-size: functions.textoem(36px);
         padding-bottom: 5px;
         text-align: left;
       }
@@ -64,8 +64,19 @@
       }
     }
     &__button {
-      button:hover {
+      button {
+        width: 150px;
+        @include mixins.breakpoint(mobile) {
+          height: 40px;
+          width: 100px;
+        }
+        p {
+          text-align: center;
+        }
+      }
+            button:hover {
         background-color: lighten($color: #b5121b, $amount: 5%);
+        
       }
       img {
         transition: 1s ease;
