@@ -15,8 +15,9 @@
     height: 45vh;
   }
   @include mixins.breakpoint(tablet) {
-    background: url(../../../dist/images/hero/hero-4.png);
+    background: variaveis.$sec-color url(../../../dist/images/hero/hero-4.png);
     padding: 0;
+    z-index: 2;
   }
 
   @include mixins.breakpoint(mobile) {

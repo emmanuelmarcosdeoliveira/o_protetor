@@ -7,34 +7,34 @@
   left: 0;
   z-index: 1;
   background-color: variaveis.$bg-color;
-  transition: background-color .5s ease-in;
+  transition: background-color 0.5s ease-in;
   &--is-hidden {
-background-color: transparent;
-transition: background-color .5s ease-in;
+    background-color: transparent;
+    transition: background-color 0.5s ease-in;
     .header__container__logo {
       opacity: 0;
+      padding: 10px;
     }
     .header__container__links__item:first-child {
       opacity: 0;
       visibility: hidden;
-      transition: opacity .5s ease-in;
+      transition: opacity 0.5s ease-in;
     }
-
   }
 }
 
 .header__container {
- 
   display: flex;
   justify-content: space-between;
-  
+
   &__logo {
     padding: 10px;
-    transition: opacity .5s ease-in;
+    transition: opacity 0.5s ease-in;
     img {
       max-width: 48px;
       width: 100%;
       display: block;
+      padding: 10px;
     }
   }
   &__links {
@@ -49,25 +49,22 @@ transition: background-color .5s ease-in;
       padding-right: 20px;
       border-radius: 5px;
       background-color: rgba($color: #b5121b, $alpha: 0.5);
-      transition: opacity .5s ease-in;
+      transition: opacity 0.5s ease-in;
       &:hover {
-        background-color: lighten($color: #b5121b, $amount: 5%) ;
+        background-color: lighten($color: #b5121b, $amount: 5%);
       }
       @include mixins.breakpoint(mobile) {
         margin-right: 10px;
         padding-left: 10px;
         padding-right: 10px;
       }
-      
-    a img {
-      max-width: 24px;
-      width: 100%;
-      display: block;
-      margin-left: 10px;
-     }
-     
+
+      a img {
+        max-width: 24px;
+        width: 100%;
+        display: block;
+        margin-left: 10px;
       }
     }
   }
-
-
+}
